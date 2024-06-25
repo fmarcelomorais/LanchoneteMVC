@@ -1,5 +1,9 @@
-﻿using Lanchonete.Application.Mapping;
+﻿using Lanchonete.Application.Interfaces;
+using Lanchonete.Application.Mapping;
+using Lanchonete.Application.Services;
+using Lanchonete.Domain.Interafces;
 using Lanchonete.Infraestrutura.Context;
+using Lanchonete.Infraestrutura.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +18,10 @@ namespace Lanchonete.CrossCutting
             {
                 options.UseSqlServer(configuration.GetConnectionString("SqlServer"));
             });
+            
+            services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+            services.AddTransient<ILanchesRepository, LancheRepository>();
+            services.AddTransient<ICategoriaService, CategoriaService>();
 
             services.AddAutoMapper(typeof(ModelToModelDTOConfigureProfile));
 

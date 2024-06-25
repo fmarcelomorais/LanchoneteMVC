@@ -1,4 +1,5 @@
-﻿using Lanchonete.Domain.Models;
+﻿using Lanchonete.Application.DTOs;
+using Lanchonete.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Lanchonete.Application.Interfaces
 {
     public interface ICategoriaService
     {
-        Task<IEnumerable<Categoria>> RetornaCategorias();
+        Task<IEnumerable<CategoriaDTO>> RetornaCategorias();
     }
 }

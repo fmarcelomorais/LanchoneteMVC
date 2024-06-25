@@ -7,11 +7,10 @@ namespace Lanchonete.UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ICategoriaService _categoriaService;
-        public HomeController(ICategoriaService service) { _categoriaService = service;  }
+        
         public IActionResult Index()
         {
-            var categoria = _categoriaService.RetornaCategorias();
+           
 
             return View();
         }

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Lanchonete.Application.DTOs;
+using Lanchonete.Domain.Models;
 
 namespace Lanchonete.Application.Mapping
 {
@@ -6,7 +8,7 @@ namespace Lanchonete.Application.Mapping
     {
         public ModelToModelDTOConfigureProfile()
         {
-            
+            CreateMap<Categoria, CategoriaDTO>().ReverseMap();
         }
     }
 }

@@ -1,0 +1,26 @@
+﻿@model List<Lanchonete.Application.DTOs.CategoriaDTO>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.Nome</th>
+                <th>@item.Descricao</th>
+                <th>
+                    <button class="btn btn-info"><i class="fa fa-search" arial-hidden="true"></i></button> | 
+                    <button class="btn btn-warning"><i class="fa fa-edit" arial-hidden="true"></i></button> | 
+                    <button class="btn btn-danger"><i class="fa fa-trash" arial-hidden="true"></i></button> 
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
+
