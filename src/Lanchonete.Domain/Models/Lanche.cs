@@ -21,17 +21,18 @@ namespace Lanchonete.Domain.Models
         public Guid CategoriaId { get; private set; }
         public Categoria Categoria { get; private set; }
 
-        //public Lanche(string nome, int preco, string descricaoCurta, string descricaoLonga, string imagem, string thumbnail, Categoria categoria, bool preferido, bool disponivel)
-        //{
-        //    Nome = nome;
-        //    Preco = preco;
-        //    DescricaoCurta = descricaoCurta;
-        //    DescricaoLonga = descricaoLonga;
-        //    ImagemUrl = imagem;
-        //    ThumbnailUrl = thumbnail;
-        //    Categoria = categoria;
-        //    Preferido = preferido;
-        //    Disponivel = disponivel;
-        //}
+        public Lanche(string nome, int preco, string descricaoCurta, string descricaoLonga, string imagem, string thumbnail, Categoria categoria, bool preferido, bool disponivel)
+        {
+            Nome = nome;
+            Preco = preco;
+            DescricaoCurta = descricaoCurta;
+            DescricaoLonga = descricaoLonga;
+            ImagemUrl = imagem;
+            ThumbnailUrl = thumbnail;
+            Categoria = categoria;
+            Preferido = preferido;
+            Disponivel = disponivel;
+            CategoriaId = categoria.Id;
+        }
     }
 }

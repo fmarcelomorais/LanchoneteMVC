@@ -1,3 +1,4 @@
+using Lanchonete.Application.Interfaces;
 using Lanchonete.UI.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -6,15 +7,12 @@ namespace Lanchonete.UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+        private readonly ICategoriaService _categoriaService;
+        public HomeController(ICategoriaService service) { _categoriaService = service;  }
         public IActionResult Index()
         {
+            var categoria = _categoriaService.RetornaCategorias();
+
             return View();
         }
 
