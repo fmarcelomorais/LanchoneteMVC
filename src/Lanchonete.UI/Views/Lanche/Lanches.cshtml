@@ -1,4 +1,4 @@
-﻿@model ListaLanches;
+﻿@model ListaLanches
 
 @{
     ViewData["Title"] = "Lanches";
@@ -6,18 +6,10 @@
 
 <h1>@ViewData["Titulo-Lista"] - @Model.CategoriaAtual</h1>
 <hr />
+
 @foreach(var item in Model.Lanches)
 {
-    <div class="lanche">
-        <div class="image">
-            <img src="@item.ImagemUrl" width="150px" height="150px"/>
-        </div>
-        <div class="detalhes">
-            <p hidden><span>Id: </span>@item.Id</p>
-            <p><span>Lanche: </span>@item.Nome</p>
-            <p>Preço: @item.Preco.ToString("C")</p>                   
-        </div>
-    </div>
-    
+        <partial name="_LancheResumo" for="@item"/>
+        <p>@item.Nome</p>
 }
 

@@ -14,9 +14,9 @@ namespace Lanchonete.UI.Controllers
         public async Task<IActionResult> Lanches()
         {
             ViewData["Titulo-Lista"] = "Todos os Lanches";
-            var listaDeLanches = await _lancheService.RetornaLanches();
+   
             var lanchesECategoria = new ListaLanches();
-            lanchesECategoria.Lanches = listaDeLanches;
+            lanchesECategoria.Lanches = await _lancheService.RetornaLanches();
             lanchesECategoria.CategoriaAtual = "Categoria";
             
 

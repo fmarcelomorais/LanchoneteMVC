@@ -1,0 +1,12 @@
+﻿@model LancheDTO;
+
+<div class="lanche">
+    <div class="image">
+        <img src="@Model.ImagemUrl" width="150px" height="150px" />
+    </div>
+    <div class="detalhes">
+        <p hidden><span>Id: </span>@Model.Id</p>
+        <p><span>Lanche: </span>@Model.Nome</p>
+        <p>Preço: @Model.Preco.ToString("C")</p>
+    </div>
+</div>
