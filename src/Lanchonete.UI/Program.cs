@@ -1,4 +1,5 @@
 using Lanchonete.CrossCutting;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 

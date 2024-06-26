@@ -20,3 +20,21 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*LanchesView*/
+.lanche{
+  display: flex;
+}
+.lanche .image{
+  width: 15%;
+  height: 15%;
+  padding: 10px;
+}
+.lanche .image img{
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px #000000;
+}
+.detalhes>p>span{
+  font-weight: 600;
+  font-size: 1.2rem;
+}

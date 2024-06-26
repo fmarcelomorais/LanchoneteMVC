@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+
 namespace Lanchonete.CrossCutting
 {
     public static class DependencyInjection
@@ -20,8 +21,9 @@ namespace Lanchonete.CrossCutting
             });
             
             services.AddTransient<ICategoriaRepository, CategoriaRepository>();
-            services.AddTransient<ILanchesRepository, LancheRepository>();
             services.AddTransient<ICategoriaService, CategoriaService>();
+            services.AddTransient<ILanchesRepository, LancheRepository>();
+            services.AddTransient<ILancheService, LancheService>();
 
             services.AddAutoMapper(typeof(ModelToModelDTOConfigureProfile));
 

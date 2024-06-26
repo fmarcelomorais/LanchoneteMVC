@@ -9,6 +9,7 @@ namespace Lanchonete.Application.Mapping
         public ModelToModelDTOConfigureProfile()
         {
             CreateMap<Categoria, CategoriaDTO>().ReverseMap();
+            CreateMap<Lanche, LancheDTO>().ReverseMap();
         }
     }
 }
